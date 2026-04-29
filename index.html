@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZJU Oline Demo</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+    <!-- 星空画布 -->
+    <canvas id="starfield"></canvas>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">✦ ZJU Oline</div>
+        <ul class="nav-links">
+            <li><a href="#home" data-i18n="nav.home"></a></li>
+            <li><a href="#about" data-i18n="nav.about"></a></li>
+            <li><a href="#skills" data-i18n="nav.skills"></a></li>
+            <li><a href="#projects" data-i18n="nav.projects"></a></li>
+            <li><a href="#contact" data-i18n="nav.contact"></a></li>
+            <li><a href="https://zjusim-docs.67656.fun/" target="_blank" rel="noopener noreferrer"
+                    data-i18n="nav.docs"></a></li>
+        </ul>
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn" data-lang="zh-CN">简体中文</button>
+            <button type="button" class="lang-btn" data-lang="en">English</button>
+        </div>
+    </nav>
+
+    <!-- 主视觉区 -->
+    <section class="hero" id="home">
+        <div class="hero-subtitle" data-i18n="hero.subtitle"></div>
+        <div class="typewriter-container">
+            <div class="typewriter-text" id="typewriter"></div>
+            <span class="cursor" id="cursor"></span>
+        </div>
+        <p class="hero-description" data-i18n="hero.description"></p>
+        <div class="contact-links">
+            <a href="https://67656.fun" class="contact-link hero-cta">
+                <span data-i18n="hero.cta"></span>
+                <span class="hero-cta-arrow" aria-hidden="true">→</span>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span data-i18n="hero.scroll"></span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- 项目定位 -->
+    <section id="about">
+        <div class="reveal">
+            <h2 class="section-title" data-i18n="about.title"></h2>
+            <div class="section-line"></div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about.p1"></p>
+                    <p data-i18n="about.p2"></p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label" data-i18n="about.stats.rules"></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label" data-i18n="about.stats.scenes"></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="2">0</div>
+                        <div class="stat-label" data-i18n="about.stats.deployments"></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label" data-i18n="about.stats.semesters"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心能力 -->
+    <section id="skills">
+        <div class="reveal">
+            <h2 class="section-title" data-i18n="skills.title"></h2>
+            <div class="section-line"></div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span class="skill-icon">⚡</span>
+                    <h3 data-i18n="skills.cards.0.title"></h3>
+                    <p data-i18n="skills.cards.0.desc"></p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="92%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🎨</span>
+                    <h3 data-i18n="skills.cards.1.title"></h3>
+                    <p data-i18n="skills.cards.1.desc"></p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="89%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🔧</span>
+                    <h3 data-i18n="skills.cards.2.title"></h3>
+                    <p data-i18n="skills.cards.2.desc"></p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="87%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🚀</span>
+                    <h3 data-i18n="skills.cards.3.title"></h3>
+                    <p data-i18n="skills.cards.3.desc"></p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">📱</span>
+                    <h3 data-i18n="skills.cards.4.title"></h3>
+                    <p data-i18n="skills.cards.4.desc"></p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🤖</span>
+                    <h3 data-i18n="skills.cards.5.title"></h3>
+                    <p data-i18n="skills.cards.5.desc"></p>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="91%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关键模块 -->
+    <section id="projects">
+        <div class="reveal">
+            <h2 class="section-title" data-i18n="projects.title"></h2>
+            <div class="section-line"></div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🧭</div>
+                    <div class="project-info">
+                        <h3 data-i18n="projects.cards.0.title"></h3>
+                        <p data-i18n="projects.cards.0.desc"></p>
+                        <div class="project-tags">
+                            <span>Vue 3</span>
+                            <span>Pinia</span>
+                            <span>Vite</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🎵</div>
+                    <div class="project-info">
+                        <h3 data-i18n="projects.cards.1.title"></h3>
+                        <p data-i18n="projects.cards.1.desc"></p>
+                        <div class="project-tags">
+                            <span>FastAPI</span>
+                            <span>Redis</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📅</div>
+                    <div class="project-info">
+                        <h3 data-i18n="projects.cards.2.title"></h3>
+                        <p data-i18n="projects.cards.2.desc"></p>
+                        <div class="project-tags">
+                            <span>pgvector</span>
+                            <span>Docker</span>
+                            <span>CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系 -->
+    <section id="contact">
+        <div class="reveal">
+            <h2 class="section-title" data-i18n="contact.title"></h2>
+            <div class="section-line"></div>
+            <div class="contact-content">
+                <p data-i18n="contact.description"></p>
+                <div class="contact-links">
+                    <a href="https://zjusim-docs.67656.fun/" target="_blank" rel="noopener noreferrer"
+                        class="contact-link">
+                        📚 <span data-i18n="contact.doc"></span>
+                    </a>
+                    <a href="#home" class="contact-link">
+                        🕹️ <span data-i18n="contact.home"></span>
+                    </a>
+                    <a href="#projects" class="contact-link">
+                        🏗️ <span data-i18n="contact.projects"></span>
+                    </a>
+                    <a href="#skills" class="contact-link">
+                        ⚙️ <span data-i18n="contact.skills"></span>
+                    </a>
+                    <a href="https://67656.fun" class="contact-link hero-cta">
+                        <span data-i18n="hero.cta"></span>
+                        <span class="hero-cta-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p data-i18n="footer.text"></p>
+    </footer>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>
